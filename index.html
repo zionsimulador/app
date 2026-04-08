@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    
+     
+    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#2563eb" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header-inline">
+  <img src="img/logo.png" alt="ZionPay" class="logo-inline" />
+
+  <div class="titulo-box">
+    <h2>
+      <span class="zion">Zion</span><span class="pay">Pay</span>
+    </h2>
+    <p class="subtitulo">Simulador de taxas</p>
+  </div>
+</div>
+
+      <!-- VALOR -->
+      <label>Valor</label>
+      <input
+        type="text"
+        id="valor_visivel"
+        oninput="
+          formatarValor(this);
+          recalcularAutomatico();
+        "
+      />
+      <input type="hidden" id="valor_real" />
+
+      <!-- TIPO -->
+      <label>Tipo</label>
+      <select
+        id="tipo"
+        onchange="
+          carregarModalidades();
+          recalcularAutomatico();
+        "
+      >
+        <option value="link">Link Pagamento</option>
+        <option value="maquininha">Maquininha</option>
+      </select>
+
+      <!-- MODALIDADE -->
+      <label>Modalidade</label>
+      <select id="modalidade" onchange="recalcularAutomatico()"></select>
+
+      <!-- BANDEIRA -->
+      <label>Bandeira</label>
+      <select id="bandeira" onchange="recalcularAutomatico()">
+        <option value="visa">Visa</option>
+        <option value="master">Master</option>
+        <option value="elo">Elo</option>
+        <option value="amex">Amex</option>
+      </select>
+
+      <!-- MODO -->
+      <label>Modo</label>
+      <select id="modo" onchange="recalcularAutomatico()">
+        <option value="">Selecione</option>
+        <option value="paga">paga taxa</option>
+        <option value="repassa">repassa taxa</option>
+      </select>
+
+      <button onclick="simular()">Simular</button>
+
+      <div id="resultado"></div>
+    </div>
+
+    <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js")
+      .then(() => console.log("✅ PWA ativo"))
+      .catch(err => console.log("❌ erro:", err));
+  }
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="supabase.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

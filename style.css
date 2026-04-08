@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f9fafb; /* branco suave */
+  color: #111827; /* texto escuro elegante */
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.container {
+  max-width: 380px;
+  margin: 40px auto;
+  padding: 20px;
+
+  background: #ffffff;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 8px;
+
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+
+  background: #ffffff;
+  color: #111827;
+
+  font-size: 14px;
+
+  box-sizing: border-box; /* 🔥 ESSENCIAL */
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+
+label {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 12px;
+  display: block;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 14px;
+
+  border-radius: 10px;
+  border: none;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+#resultado {
+  margin-top: 20px;
+  padding: 16px;
+
+  border-radius: 12px;
+  background: #f1f5f9;
+
+  border: 1px solid #e5e7eb;
+}
+/* HEADER LADO A LADO */
+.header-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* LOGO PEQUENA */
+.logo-inline {
+  width: 100px;
+  height: auto;
+}
+
+/* TÍTULO */
+.header-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* LOGO */
+.logo-inline {
+  width: 100px;
+}
+
+/* BLOCO TEXTO */
+.titulo-box h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ZION */
+.zion {
+  color: #f59e0b;
+}
+
+/* PAY */
+.pay {
+  color: #2563eb;
+}
+
+/* SUBTÍTULO */
+.subtitulo {
+  margin: 2px 0 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151; /* mais forte */
+}
+.titulo-box h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
