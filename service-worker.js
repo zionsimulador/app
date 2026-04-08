@@ -1,4 +1,4 @@
-const CACHE_NAME = "zionpay-v2";
+const CACHE_NAME = "zionpay-v3";
 
 const urlsToCache = [
   "/",
