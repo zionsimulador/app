@@ -44,6 +44,7 @@ async function carregarModalidades() {
 
   // 🔁 remove duplicados
   const unicos = [...new Set(dados.map((d) => d.modalidade))];
+  unicos.sort((a, b) => parseInt(a) - parseInt(b));
 
   // 🔁 preenche select
   unicos.forEach((mod) => {
